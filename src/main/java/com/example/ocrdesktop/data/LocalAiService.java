@@ -87,8 +87,9 @@ public class LocalAiService {
             for (Receipt receipt : request.receipts) {
                 try {
                     // Create process builder
-                    ProcessBuilder builder = new ProcessBuilder(AppContext.PythonExeBinariesPath);
+                    ProcessBuilder builder = new ProcessBuilder("python3", "/Users/ghazal.ghafari/Invizo-OCR/src/main/python/AiInterface.py");
                     builder.redirectErrorStream(true);
+
 
                     // Creating the JSON input
                     JSONObject inputJson = createInputJSON(request, receipt);
