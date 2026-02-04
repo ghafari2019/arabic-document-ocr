@@ -260,6 +260,8 @@ DetailReceiptTypeController {
 
         // Show the file chooser dialog
         Stage stage = (Stage) selectTemplateButton.getScene().getWindow();
+        System.out.println("JSONsSavingDir = " + AppContext.getInstance().JSONsSavingDir);
+        System.out.println("Exists? " + new File(AppContext.getInstance().JSONsSavingDir).exists());
         File selectedFile = fileChooser.showOpenDialog(stage);
 
         // Update the label with the file path or show "No file selected" if canceled
