@@ -87,7 +87,7 @@ public class LocalAiService {
             for (Receipt receipt : request.receipts) {
                 try {
                     // Create process builder
-                    ProcessBuilder builder = new ProcessBuilder("python3", "/Users/ghazal.ghafari/Invizo-OCR/src/main/python/AiInterface.py");
+                    ProcessBuilder builder = new ProcessBuilder("/Users/ghazal.ghafari/venvs/invizo/bin/python", "/Users/ghazal.ghafari/Invizo-OCR/src/main/python/AiInterface.py");
                     builder.redirectErrorStream(true);
 
 
