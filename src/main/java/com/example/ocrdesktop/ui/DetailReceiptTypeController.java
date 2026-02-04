@@ -252,6 +252,11 @@ DetailReceiptTypeController {
                 new FileChooser.ExtensionFilter("All Files", "*.*")
         );
         // fileChooser.setInitialDirectory(new File(AppContext.getInstance().JSONsSavingDir));
+        File dir = new File(AppContext.getInstance().JSONsSavingDir);
+        if (dir.exists() && dir.isDirectory()) {
+            fileChooser.setInitialDirectory(dir);
+        }
+
 
         // Show the file chooser dialog
         Stage stage = (Stage) selectTemplateButton.getScene().getWindow();
